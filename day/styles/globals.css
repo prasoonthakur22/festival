@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bc: #fff;
+}
+
+html {
+  background-color: white !important;
+}
+
+.st-btn {
+  background: black !important;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #000;
+  box-shadow: inset 2px 2px 2px hsl(0deg 0% 100% / 25%),
+    inset -2px -2px 2px rgb(0 0 0 / 25%);
+}
+
+html::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+
+html::-webkit-scrollbar {
+  width: var(--scrollbar-width, 15px);
+  height: var(--scrollbar-height, 15px);
+  background-color: #000;
+}
+.min-h-screen {
+  background-size: cover;
+}
+
+.nav-link {
+  display: inline-block;
+  position: relative;
+}
+
+.nav-link:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -7px;
+  left: 0;
+  background-color: var(--titles-color);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+li .nav-link {
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+blockquote {
+  background: lightgray;
+  padding: 14px;
+}
